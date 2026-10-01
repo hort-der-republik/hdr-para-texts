@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
+                    Edition</title>
+                <title type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
+                    Genetische Edition</title>
+                <editor ref="https://d-nb.info/gnd/1036708799">Bernhard Oberreither</editor>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+
+        <body>
+            
+            <figure>
+                <graphic url="../img/gerlach-banner.jpg"/>
+                <figDesc xml:lang="de">Foto: Martin Gerlach / Wikimedia Commons</figDesc>
+                <figDesc xml:lang="en">Image: Martin Gerlach / Wikimedia Commons</figDesc>
+            </figure>
+            
+            <div xml:lang="de">
+                
+            </div>
+            
+            
+            <div xml:lang="de">
+                <p> Auf eine Massendemonstration auf den Straßen Wiens im Juli 1927 reagierte die
+                    Polizei mit äußerster Brutalität: Sie setzte Gewehrsalven und Reiterattacken
+                    gegen die aufgebrachte Menschenmenge ein. Die Eskalation der Gewalt, in deren
+                    Verlauf der Wiener Justizpalast dem Feuer zum Opfer fiel, forderte 89
+                    Menschenleben. Sie hatte desaströse Auswirkungen auf das politische Klima in
+                    Österreich und gilt als bedeutender Wendepunkt in der Geschichte der Ersten
+                    Republik. </p>
+                <p> Für den Polemiker und Kulturkritiker Karl Kraus war sie der Anlass für eine ganz
+                    besondere Ausgabe seiner Zeitschrift „Die Fackel“. Das Heft vom Oktober 1927
+                    enthält nur einen einzigen Text: „Der Hort der Republik“. Dieser Text, einer der
+                    Höhepunkte in Kraus’ Wirken, stellt eine Anklage gegen eine moralisch apathische
+                    Öffentlichkeit dar, sowie einen vernichtenden Angriff auf jene, die Kraus für
+                    das Massaker verantwortlich machte – allen voran den Wiener Polizeipräsidenten
+                    Johann Schober, der den Schießbefehl gegeben hatte. </p>
+                <p> Im Rahmen des FWF-geförderten Projekts wird dieser Text zum Gegenstand der
+                    ersten digitalen genetischen Edition eines Textes von Karl Kraus. </p>
+                <p> Die Entstehung dieses Textes umfasste, wie oft bei Kraus, zahllose
+                    Umarbeitungen, Ergänzungen und Korrekturen. Gegenstand zahlreicher
+                    Überarbeitungen wurde auch eine einleitende, vierzigseitigen Zitatmontage, die
+                    die beschönigende Darstellung des Geschehens durch die Regierung sowie die
+                    rechte und bürgerliche Presse mit zahlreichen Augenzeugenberichten aus der
+                    linken Presse kontrastiert. Die für die Textentstehung relevanten Materialien –
+                    Manuskripte, Druckfahnen und nicht zuletzt die von Kraus für die Erstellung der
+                    Zitatmontage genutzten Zeitungsausschnitte – befinden sich heute im
+                    Literaturarchiv der österreichischen Nationalbibliothek. </p>
+                <p> Alle überlieferten Textträger werden im Zuge des Projekts transkribiert und
+                    anschließend auf mehreren Ebenen zueinander in Beziehung gesetzt. So wird es die
+                    Edition ermöglichen, die Entstehung dieses bedeutenden Textes Schritt für
+                    Schritt zu beobachten: von den von Kraus gewählten Zeitungsausschnitten über
+                    zahlreiche Sätze von Korrekturfahnen bis zum publizierten Text in der „Fackel“.
+                    Kraus’ Arbeitsweise sowie die Eigenheiten des Materials dienen dabei als Anstoß
+                    für die Reflexion und Diskussion zentraler Begrifflichkeiten der
+                    Editionswissenschaft. </p>
+                <p> Die in der Webapplikation bereitgestellten Textansichten werden eine genetische
+                    Darstellung umfassen, die die sukzessive Weiterentwicklung des Textes
+                    nachvollziehbar macht, sowie eine dokumentarische Ansicht, in der digitale
+                    Faksimiles der Originale ihren Transkriptionen gegenübergestellt werden.
+                    Verschiedene Visualisierungen werden Überblicksansichten auf die Genese des
+                    Texts bieten. Alle Transkriptionen werden schließlich als Textkorpus für die
+                    Nachnutzung zur Verfügung gestellt. </p>
+                <p> Ein erster Publikationsschritt der Edition ist für den hundertsten Jahrestag des
+                    Ereignisses 2027 vorgesehen. </p>
+            </div>
+            <div xml:lang="en">
+                <p> In July 1927, the police responded with extreme brutality to a mass
+                    demonstration on the streets of Vienna, firing volleys of gunfire and launching
+                    cavalry charges against the agitated crowd. The escalation of violence, during
+                    which the Vienna Palace of Justice was set ablaze, claimed 89 lives. It had
+                    disastrous consequences for the political climate in Austria and is regarded as
+                    a significant turning point in the history of the First Republic. </p>
+                <p> It caused the polemicist and cultural critic Karl Kraus to publish a very
+                    special issue of his periodical “Die Fackel” in October 1927, containing just a
+                    single text: “Der Hort der Republik” (“The Threshold of the Republic”). This
+                    text, one of the pinnacles of Kraus’s work, constitutes an indictment of a
+                    morally apathetic public, as well as a scathing attack on those whom Kraus held
+                    responsible for the massacre – above all the Viennese police chief Johann
+                    Schober, who had given the order to shoot. </p>
+                <p> In this FWF-funded edition project, Kraus’s text will be the subject of the
+                    first digital critical edition of a text by Karl Kraus. </p>
+                <p> As is often the case with Kraus, the creation of this text involved countless
+                    revisions, additions and corrections. Additionally, an introductory forty-page
+                    montage combines a large quantity of quotations to contrast the government’s
+                    glossed-over account of the events, as well as that of the right-wing and
+                    bourgeois press, with numerous eyewitness accounts reported in the left-wing
+                    press. The materials relating to the text’s creation – manuscripts, galley
+                    proofs and, not least, the newspaper clippings used by Kraus to compile the
+                    montage of quotations – are now held in the Literary Archives of the Austrian
+                    National Library. </p>
+                <p> All extant textual witnesses will be transcribed and subsequently related to one
+                    another on multiple levels. The edition will thus enable readers to trace the
+                    genesis of this important text step by step: from the newspaper clippings
+                    selected by Kraus, through numerous sets of proofs, to the published text in
+                    “Die Fackel”. Kraus’s working methods and the specific characteristics of the
+                    material serve as a starting point for reflection on and discussion of key
+                    concepts in editorial scholarship. </p>
+                <p> The text views provided in the web application will include a genetic
+                    representation that traces the text’s successive development, as well as a
+                    documentary view in which digital facsimiles of the originals are juxtaposed
+                    with their transcriptions. Various visualisations will offer an overview of the
+                    text’s genesis. All transcriptions will ultimately be made available as a text
+                    corpus for further use. </p>
+                <p> The first stage of publication of the edition is scheduled for the centenary of
+                    the event in 2027. </p>
+            </div>
+        </body>
+    </text>
+</TEI>
