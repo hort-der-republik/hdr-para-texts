@@ -5,12 +5,44 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main" xml:lang="en">About the Project</title>
-            <title type="main" xml:lang="de">Über das Projekt</title>
-            <editor ref="https://d-nb.info/gnd/1036708799">Bernhard Oberreither</editor>
+             <title level="a" type="main" xml:lang="en">About the Project</title>
+            <title level="a" type="main" xml:lang="de">Über das Projekt</title>
+            
+            <title level="m" type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
+               Edition</title>
+            <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
+               Genetische Edition</title>
+            <respStmt>
+               <resp xml:lang="en">Team</resp>
+               <resp xml:lang="de">Team</resp>
+               <persName>Peter Andorfer</persName>
+               <persName>Barbara Krautgartner</persName>
+               <persName>Isabel Langkabel</persName>
+               <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither (Lead)</persName>
+               <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
+               <persName>Kinga Sramó</persName>
+            </respStmt>
+            <respStmt>
+               <resp xml:lang="en">Project Lead</resp>
+               <resp xml:lang="de">Projektleitung</resp>
+               <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
+            </respStmt>
+            <funder>
+               <name>Österreichischer Wissenschaftsfonds FWF</name>
+               <address>
+                  <street>Georg-Coch-Platz 2</street>
+                  <postCode>1010 Wien</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Wien</settlement>
+                  </placeName>
+               </address>
+            </funder>
          </titleStmt>
          <publicationStmt>
-            <p/>
+            <publisher>Ludwig Boltzmann Institute for Digital History</publisher>
+            <publisher>Austrian Centre for Digital Humanities </publisher>
+            <pubPlace>Vienna</pubPlace>
          </publicationStmt>
          <sourceDesc>
             <p>Born digital.</p>
