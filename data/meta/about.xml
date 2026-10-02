@@ -5,9 +5,8 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title level="a" type="main" xml:lang="en">About the Project</title>
+            <title level="a" type="main" xml:lang="en">About the Project</title>
             <title level="a" type="main" xml:lang="de">Über das Projekt</title>
-            
             <title level="m" type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
                Edition</title>
             <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
@@ -22,13 +21,9 @@
                <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
                <persName>Kinga Sramó</persName>
             </respStmt>
-            <respStmt>
-               <resp xml:lang="en">Project Lead</resp>
-               <resp xml:lang="de">Projektleitung</resp>
-               <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
-            </respStmt>
             <funder>
-               <name>Österreichischer Wissenschaftsfonds FWF</name>
+               <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
+               <name xml:lang="en">Austrian Science Fund FWF</name>
                <address>
                   <street>Georg-Coch-Platz 2</street>
                   <postCode>1010 Wien</postCode>
@@ -41,7 +36,7 @@
          </titleStmt>
          <publicationStmt>
             <publisher>Ludwig Boltzmann Institute for Digital History</publisher>
-            <publisher>Austrian Centre for Digital Humanities </publisher>
+            <publisher>Austrian Centre for Digital Humanities</publisher>
             <pubPlace>Vienna</pubPlace>
          </publicationStmt>
          <sourceDesc>
@@ -96,6 +91,17 @@
                   target="https://geschichte.lbg.ac.at/">Ludwig Boltzmann Institute for Digital
                   History</ref> and at the <ref target="https://acdh.oeaw.ac.at">Austrian Centre for
                   Digital Humanities</ref></p>
+         </div>
+         <div>
+            <p>
+               <figure>
+                  <graphic url="../img/fwf-logo.svg"/>
+                  <figDesc xml:lang="de">Foto: FWF Logo</figDesc>
+                  <figDesc xml:lang="en">Image: FWF Logo</figDesc>
+               </figure>
+               This research was funded in whole or in part by the Austrian Science Fund (FWF)
+               10.55776/PAT4713925.
+            </p>
          </div>
 
 
