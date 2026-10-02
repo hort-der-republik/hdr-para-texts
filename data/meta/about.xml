@@ -12,15 +12,20 @@
             <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
                Genetische Edition</title>
             <respStmt>
-               <resp xml:lang="en">Team</resp>
-               <resp xml:lang="de">Team</resp>
+               <resp xml:lang="de">Team – Entwickler:innen</resp>
+               <resp xml:lang="en">Team – Developers</resp>
                <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
                <persName key="">Barbara Krautgartner</persName>
-               <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
-               <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither (Lead)</persName>
-               <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
                <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
             </respStmt>
+            <respStmt>
+               <resp xml:lang="de">Team – Editor:innen</resp>
+               <resp xml:lang="en">Team – Editors</resp>
+               <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
+               <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
+               <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
+            </respStmt>
+            <principal key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</principal>
             <funder>
                <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
                <name xml:lang="en">Austrian Science Fund FWF</name>
@@ -35,8 +40,8 @@
             </funder>
          </titleStmt>
          <publicationStmt>
-            <publisher>Ludwig Boltzmann Institute for Digital History</publisher>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
+            <publisher key="https://explore.gnd.network/gnd/1228367132">Ludwig Boltzmann Institute for Digital History</publisher>
+            <publisher key="https://explore.gnd.network/gnd/1123037736">Austrian Centre for Digital Humanities</publisher>
             <pubPlace>Vienna</pubPlace>
          </publicationStmt>
          <sourceDesc>
