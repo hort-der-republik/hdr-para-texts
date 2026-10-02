@@ -2,109 +2,115 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title level="a" type="main" xml:lang="en">About the Project</title>
-            <title level="a" type="main" xml:lang="de">Über das Projekt</title>
-            <title level="m" type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
-               Edition</title>
-            <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
-               Genetische Edition</title>
-            <respStmt>
-               <resp xml:lang="en">Team</resp>
-               <resp xml:lang="de">Team</resp>
-               <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
-               <persName key="">Barbara Krautgartner</persName>
-               <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
-               <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither (Lead)</persName>
-               <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
-               <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
-            </respStmt>
-            <funder>
-               <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
-               <name xml:lang="en">Austrian Science Fund FWF</name>
-               <address>
-                  <street>Georg-Coch-Platz 2</street>
-                  <postCode>1010 Wien</postCode>
-                  <placeName>
-                     <country>A</country>
-                     <settlement>Wien</settlement>
-                  </placeName>
-               </address>
-            </funder>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>Ludwig Boltzmann Institute for Digital History</publisher>
-            <publisher>Austrian Centre for Digital Humanities</publisher>
-            <pubPlace>Vienna</pubPlace>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Born digital.</p>
-         </sourceDesc>
-      </fileDesc>
-   </teiHeader>
-   <text>
-      <body>
-         <div xml:lang="de">
-            <p>
-               <lb/>Projektförderung: FWF (<ref
-                  target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925"
-                  >PAT4713925</ref>) <lb/>Projektdauer: 01.09.2026–31.08.2029 <lb/>Projektleitung:
-                  <ref target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">Bernhard
-                  Oberreither</ref> (LBIDH) <lb/>Projektmitarbeiter:innen: <ref
-                  target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">Isabella
-                  Schwentner</ref> (LBIDH), <ref
-                  target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">Isabel
-                  Langkabel</ref> (LBIDH), <ref
-                  target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer"
-                  >Peter Andorfer</ref> (ACDH), <ref
-                  target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner"
-                  >Barbara Krautgartner</ref> (ACDH), <ref
-                  target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo"
-                  >Kinga Sramó</ref> (ACDH) <lb/>Projektpartner: Austrian Centre for Digital
-               Humanities (ACDH), ÖAW <lb/>Durchgeführt am <ref
-                  target="https://geschichte.lbg.ac.at/">Ludwig Boltzmann Institute for Digital
-                  History</ref> und am <ref target="https://acdh.oeaw.ac.at">Austrian Centre for
-                  Digital Humanities</ref>
-            </p>
-         </div>
-         <div xml:lang="en">
-            <p>
-               <lb/>Project Funding: FWF (<ref
-                  target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925"
-                  >PAT4713925</ref>) <lb/>Project Duration: 01.09.2026–31.08.2029
-               <lb/>Projektleitung: <ref
-                  target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">Bernhard
-                  Oberreither</ref> (LBIDH) <lb/>Project Staff: <ref
-                  target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">Isabella
-                  Schwentner</ref> (LBIDH), <ref
-                  target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">Isabel
-                  Langkabel</ref> (LBIDH), <ref
-                  target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer"
-                  >Peter Andorfer</ref> (ACDH), <ref
-                  target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner"
-                  >Barbara Krautgartner</ref> (ACDH), <ref
-                  target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo"
-                  >Kinga Sramó</ref> (ACDH) <lb/>Projektpartner: Austrian Centre for Digital
-               Humanities (ACDH), ÖAW <lb/>Carried out at the <ref
-                  target="https://geschichte.lbg.ac.at/">Ludwig Boltzmann Institute for Digital
-                  History</ref> and at the <ref target="https://acdh.oeaw.ac.at">Austrian Centre for
-                  Digital Humanities</ref></p>
-         </div>
-         <div>
-            <p>
-               <figure>
-                  <graphic url="../img/fwf-logo.svg"/>
-                  <figDesc xml:lang="de">Foto: FWF Logo</figDesc>
-                  <figDesc xml:lang="en">Image: FWF Logo</figDesc>
-               </figure>
-               This research was funded in whole or in part by the Austrian Science Fund (FWF)
-               10.55776/PAT4713925.
-            </p>
-         </div>
-
-
-      </body>
-   </text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="a" type="main" xml:lang="en">About the Project</title>
+                <title level="a" type="main" xml:lang="de">Über das Projekt</title>
+                <title level="m" type="main" xml:lang="en">
+                    Karl Kraus: Der Hort der Republik – Digital Genetic
+                    Edition
+                </title>
+                <title level="m" type="main" xml:lang="de">
+                    Karl Kraus: Der Hort der Republik – Digitale
+                    Genetische Edition
+                </title>
+                <respStmt>
+                    <resp xml:lang="en">Team</resp>
+                    <resp xml:lang="de">Team</resp>
+                    <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
+                    <persName key="https://orcid.org/0009-0004-9615-9389">Barbara Krautgartner</persName>
+                    <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
+                    <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither (Lead)</persName>
+                    <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
+                    <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
+                </respStmt>
+                <funder>
+                    <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
+                    <name xml:lang="en">Austrian Science Fund FWF</name>
+                    <address>
+                        <street>Georg-Coch-Platz 2</street>
+                        <postCode>1010 Wien</postCode>
+                        <placeName>
+                            <country>A</country>
+                            <settlement>Wien</settlement>
+                        </placeName>
+                    </address>
+                </funder>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Ludwig Boltzmann Institute for Digital History</publisher>
+                <publisher>Austrian Centre for Digital Humanities</publisher>
+                <pubPlace>Vienna</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div xml:lang="de">
+                <p>
+                    <lb />Projektförderung: FWF (<ref target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925">PAT4713925</ref>) <lb />Projektdauer: 01.09.2026–31.08.2029 <lb />
+                    Projektleitung:
+                    <ref target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">
+                        Bernhard
+                        Oberreither
+                    </ref> (LBIDH) <lb />Projektmitarbeiter:innen: <ref target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">
+                        Isabella
+                        Schwentner
+                    </ref> (LBIDH), <ref target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">
+                        Isabel
+                        Langkabel
+                    </ref> (LBIDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer">Peter Andorfer</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner">Barbara Krautgartner</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo">Kinga Sramó</ref> (ACDH) <lb />
+                    Projektpartner: Austrian Centre for Digital
+                    Humanities (ACDH), ÖAW
+                    <lb />Durchgeführt am <ref target="https://geschichte.lbg.ac.at/">
+                        Ludwig Boltzmann Institute for Digital
+                        History
+                    </ref> und am <ref target="https://acdh.oeaw.ac.at">
+                        Austrian Centre for
+                        Digital Humanities
+                    </ref>
+                </p>
+            </div>
+            <div xml:lang="en">
+                <p>
+                    <lb />Project Funding: FWF (<ref target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925">PAT4713925</ref>) <lb />
+                    Project Duration: 01.09.2026–31.08.2029
+                    <lb />Projektleitung: <ref target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">
+                        Bernhard
+                        Oberreither
+                    </ref> (LBIDH) <lb />Project Staff: <ref target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">
+                        Isabella
+                        Schwentner
+                    </ref> (LBIDH), <ref target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">
+                        Isabel
+                        Langkabel
+                    </ref> (LBIDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer">Peter Andorfer</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner">Barbara Krautgartner</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo">Kinga Sramó</ref> (ACDH) <lb />
+                    Projektpartner: Austrian Centre for Digital
+                    Humanities (ACDH), ÖAW
+                    <lb />Carried out at the <ref target="https://geschichte.lbg.ac.at/">
+                        Ludwig Boltzmann Institute for Digital
+                        History
+                    </ref> and at the <ref target="https://acdh.oeaw.ac.at">
+                        Austrian Centre for
+                        Digital Humanities
+                    </ref>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <figure>
+                        <graphic url="../img/fwf-logo.svg" />
+                        <figDesc xml:lang="de">Foto: FWF Logo</figDesc>
+                        <figDesc xml:lang="en">Image: FWF Logo</figDesc>
+                    </figure>
+                    This research was funded in whole or in part by the Austrian Science Fund (FWF)
+                    10.55776/PAT4713925.
+                </p>
+            </div>
+        </body>
+    </text>
 </TEI>
