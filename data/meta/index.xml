@@ -12,12 +12,12 @@
                 <respStmt>
                     <resp xml:lang="en">Team</resp>
                     <resp xml:lang="de">Team</resp>
-                    <persName>Peter Andorfer</persName>
-                    <persName>Barbara Krautgartner</persName>
-                    <persName>Isabel Langkabel</persName>
+                    <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
+                    <persName key="">Barbara Krautgartner</persName>
+                    <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
                     <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither (Lead)</persName>
                     <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
-                    <persName>Kinga Sramó</persName>
+                    <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
                 </respStmt>
                 <funder>
                     <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
