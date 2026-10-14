@@ -8,12 +8,10 @@
                 <title level="a" type="main" xml:lang="en">About the Project</title>
                 <title level="a" type="main" xml:lang="de">Über das Projekt</title>
                 <title level="m" type="main" xml:lang="en">
-                    Karl Kraus: Der Hort der Republik – Digital Genetic
-                    Edition
+                    Karl Kraus: Der Hort der Republik – Digital Genetic Edition
                 </title>
                 <title level="m" type="main" xml:lang="de">
-                    Karl Kraus: Der Hort der Republik – Digitale
-                    Genetische Edition
+                    Karl Kraus: Der Hort der Republik – Digitale Genetische Edition
                 </title>
                 <respStmt>
                     <resp xml:lang="de">Team – Entwickler:innen</resp>
@@ -75,8 +73,7 @@
                         Ludwig Boltzmann Institute for Digital
                         History
                     </ref> und am <ref target="https://acdh.oeaw.ac.at">
-                        Austrian Centre for
-                        Digital Humanities
+                        Austrian Centre for Digital Humanities
                     </ref>
                 </p>
             </div>
@@ -97,23 +94,25 @@
                     Projektpartner: Austrian Centre for Digital
                     Humanities (ACDH), ÖAW
                     <lb />Carried out at the <ref target="https://geschichte.lbg.ac.at/">
-                        Ludwig Boltzmann Institute for Digital
-                        History
+                        Ludwig Boltzmann Institute for Digital History
                     </ref> and at the <ref target="https://acdh.oeaw.ac.at">
-                        Austrian Centre for
-                        Digital Humanities
+                        Austrian Centre for Digital Humanities
                     </ref>
                 </p>
             </div>
             <div>
-                <p>
-                    <figure>
-                        <graphic url="../img/fwf-logo.svg" />
-                        <figDesc xml:lang="de">Foto: FWF Logo</figDesc>
-                        <figDesc xml:lang="en">Image: FWF Logo</figDesc>
-                    </figure>
-                    This research was funded in whole or in part by the Austrian Science Fund (FWF)
-                    10.55776/PAT4713925.
+                <figure>
+                    <graphic url="../img/fwf-logo.svg" />
+                    <figDesc xml:lang="de">Foto: FWF Logo</figDesc>
+                    <figDesc xml:lang="en">Image: FWF Logo</figDesc>
+                </figure>
+                <p xml:lang="de">
+                    Diese Forschung wurde gänzlich oder teilweise durch den
+                    Wissenschaftsfonds FWF finanziert 10.55776/PAT4713925.
+                </p>
+                <p xml:lang="en">
+                    This research was funded in whole or in part by the Austrian
+                    Science Fund (FWF) 10.55776/PAT4713925.
                 </p>
             </div>
         </body>
