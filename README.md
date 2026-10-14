@@ -1,5 +1,7 @@
 # hdr-para-texts
 
+[![validate](https://github.com/hort-der-republik/hdr-para-texts/actions/workflows/test.yml/badge.svg)](https://github.com/hort-der-republik/hdr-para-texts/actions/workflows/test.yml)
+
 Repo to write/curate/store para texts (about the project, team, ...)
 
 ## what?
