@@ -7,10 +7,14 @@
             <titleStmt>
                 <title level="a" type="main" xml:lang="en">About the Project</title>
                 <title level="a" type="main" xml:lang="de">Über das Projekt</title>
-                <title level="m" type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
-                    Edition</title>
-                <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
-                    Genetische Edition</title>
+                <title level="m" type="main" xml:lang="en">
+                    Karl Kraus: Der Hort der Republik – Digital Genetic
+                    Edition
+                </title>
+                <title level="m" type="main" xml:lang="de">
+                    Karl Kraus: Der Hort der Republik – Digitale
+                    Genetische Edition
+                </title>
                 <respStmt>
                     <resp xml:lang="de">Team – Entwickler:innen</resp>
                     <resp xml:lang="en">Team – Developers</resp>
@@ -40,8 +44,8 @@
                 </funder>
             </titleStmt>
             <publicationStmt>
-                <publisher key="https://explore.gnd.network/gnd/1228367132">Ludwig Boltzmann Institute for Digital History</publisher>
-                <publisher key="https://explore.gnd.network/gnd/1123037736">Austrian Centre for Digital Humanities</publisher>
+                <publisher key="https://d-nb.info/gnd/1228367132">Ludwig Boltzmann Institute for Digital History</publisher>
+                <publisher key="https://d-nb.info/gnd/1123037736">Austrian Centre for Digital Humanities</publisher>
                 <pubPlace>Vienna</pubPlace>
             </publicationStmt>
             <sourceDesc>
@@ -53,54 +57,58 @@
         <body>
             <div xml:lang="de">
                 <p>
-                    <lb/>Projektförderung: FWF (<ref
-                        target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925"
-                        >PAT4713925</ref>) <lb/>Projektdauer: 01.09.2026–31.08.2029 <lb/>Projektleitung:
-                    <ref target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">Bernhard
-                        Oberreither</ref> (LBIDH) <lb/>Projektmitarbeiter:innen: <ref
-                            target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">Isabella
-                            Schwentner</ref> (LBIDH), <ref
-                                target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">Isabel
-                                Langkabel</ref> (LBIDH), <ref
-                                    target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer"
-                                    >Peter Andorfer</ref> (ACDH), <ref
-                                        target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner"
-                                        >Barbara Krautgartner</ref> (ACDH), <ref
-                                            target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo"
-                                            >Kinga Sramó</ref> (ACDH) <lb/>Projektpartner: Austrian Centre for Digital
-                    Humanities (ACDH), ÖAW <lb/>Durchgeführt am <ref
-                        target="https://geschichte.lbg.ac.at/">Ludwig Boltzmann Institute for Digital
-                        History</ref> und am <ref target="https://acdh.oeaw.ac.at">Austrian Centre for
-                            Digital Humanities</ref>
+                    <lb />Projektförderung: FWF (<ref target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925">PAT4713925</ref>) <lb />Projektdauer: 01.09.2026–31.08.2029 <lb />
+                    Projektleitung:
+                    <ref target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">
+                        Bernhard
+                        Oberreither
+                    </ref> (LBIDH) <lb />Projektmitarbeiter:innen: <ref target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">
+                        Isabella
+                        Schwentner
+                    </ref> (LBIDH), <ref target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">
+                        Isabel
+                        Langkabel
+                    </ref> (LBIDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer">Peter Andorfer</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner">Barbara Krautgartner</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo">Kinga Sramó</ref> (ACDH) <lb />
+                    Projektpartner: Austrian Centre for Digital
+                    Humanities (ACDH), ÖAW
+                    <lb />Durchgeführt am <ref target="https://geschichte.lbg.ac.at/">
+                        Ludwig Boltzmann Institute for Digital
+                        History
+                    </ref> und am <ref target="https://acdh.oeaw.ac.at">
+                        Austrian Centre for
+                        Digital Humanities
+                    </ref>
                 </p>
             </div>
             <div xml:lang="en">
                 <p>
-                    <lb/>Project Funding: FWF (<ref
-                        target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925"
-                        >PAT4713925</ref>) <lb/>Project Duration: 01.09.2026–31.08.2029
-                    <lb/>Projektleitung: <ref
-                        target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">Bernhard
-                        Oberreither</ref> (LBIDH) <lb/>Project Staff: <ref
-                            target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">Isabella
-                            Schwentner</ref> (LBIDH), <ref
-                                target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">Isabel
-                                Langkabel</ref> (LBIDH), <ref
-                                    target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer"
-                                    >Peter Andorfer</ref> (ACDH), <ref
-                                        target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner"
-                                        >Barbara Krautgartner</ref> (ACDH), <ref
-                                            target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo"
-                                            >Kinga Sramó</ref> (ACDH) <lb/>Projektpartner: Austrian Centre for Digital
-                    Humanities (ACDH), ÖAW <lb/>Carried out at the <ref
-                        target="https://geschichte.lbg.ac.at/">Ludwig Boltzmann Institute for Digital
-                        History</ref> and at the <ref target="https://acdh.oeaw.ac.at">Austrian Centre for
-                            Digital Humanities</ref></p>
+                    <lb />Project Funding: FWF (<ref target="https://www.fwf.ac.at/forschungsradar/10.55776/PAT4713925">PAT4713925</ref>) <lb />
+                    Project Duration: 01.09.2026–31.08.2029
+                    <lb />Projektleitung: <ref target="https://geschichte.lbg.ac.at/team/bernhard-oberreither/">
+                        Bernhard
+                        Oberreither
+                    </ref> (LBIDH) <lb />Project Staff: <ref target="https://geschichte.lbg.ac.at/team/isabella-schwentner/">
+                        Isabella
+                        Schwentner
+                    </ref> (LBIDH), <ref target="https://geschichte.lbg.ac.at/team/isabel-langkabel/">
+                        Isabel
+                        Langkabel
+                    </ref> (LBIDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/peter-andorfer">Peter Andorfer</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/barbara-krautgartner">Barbara Krautgartner</ref> (ACDH), <ref target="https://www.oeaw.ac.at/de/acdh/institut/team/mitarbeitende/kinga-sramo">Kinga Sramó</ref> (ACDH) <lb />
+                    Projektpartner: Austrian Centre for Digital
+                    Humanities (ACDH), ÖAW
+                    <lb />Carried out at the <ref target="https://geschichte.lbg.ac.at/">
+                        Ludwig Boltzmann Institute for Digital
+                        History
+                    </ref> and at the <ref target="https://acdh.oeaw.ac.at">
+                        Austrian Centre for
+                        Digital Humanities
+                    </ref>
+                </p>
             </div>
             <div>
                 <p>
                     <figure>
-                        <graphic url="../img/fwf-logo.svg"/>
+                        <graphic url="../img/fwf-logo.svg" />
                         <figDesc xml:lang="de">Foto: FWF Logo</figDesc>
                         <figDesc xml:lang="en">Image: FWF Logo</figDesc>
                     </figure>
@@ -108,8 +116,6 @@
                     10.55776/PAT4713925.
                 </p>
             </div>
-            
-            
         </body>
     </text>
 </TEI>

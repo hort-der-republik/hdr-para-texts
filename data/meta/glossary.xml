@@ -1,557 +1,731 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title level="a" type="main" xml:lang="de">Projekt-Glossar zum Datenmodell</title>
-        <title level="a" type="main" xml:lang="en">Data Model Project Glossary</title>
-        <title level="m" type="main" xml:lang="en">Karl Kraus: Der Hort der Republik – Digital Genetic
-          Edition</title>
-        <title level="m" type="main" xml:lang="de">Karl Kraus: Der Hort der Republik – Digitale
-          Genetische Edition</title>
-        <respStmt>
-          <resp xml:lang="de">Team – Entwickler:innen</resp>
-          <resp xml:lang="en">Team – Developers</resp>
-          <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
-          <persName key="https://orcid.org/0009-0004-9615-9389">Barbara Krautgartner</persName>
-          <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
-        </respStmt>
-        <respStmt>
-          <resp xml:lang="de">Team – Editor:innen</resp>
-          <resp xml:lang="en">Team – Editors</resp>
-          <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
-          <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
-          <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
-        </respStmt>
-        <principal key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</principal>
-        <funder>
-          <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
-          <name xml:lang="en">Austrian Science Fund FWF</name>
-          <address>
-            <street>Georg-Coch-Platz 2</street>
-            <postCode>1010 Wien</postCode>
-            <placeName>
-              <country>A</country>
-              <settlement>Wien</settlement>
-            </placeName>
-          </address>
-        </funder>
-      </titleStmt>
-      <publicationStmt>
-        <publisher key="https://explore.gnd.network/gnd/1228367132">Ludwig Boltzmann Institute for Digital History</publisher>
-        <publisher key="https://explore.gnd.network/gnd/1123037736">Austrian Centre for Digital Humanities</publisher>
-        <pubPlace>Vienna</pubPlace>
-      </publicationStmt>
-      <sourceDesc>
-        <p>Born digital.</p>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <classDecl>
-        <taxonomy xml:id="mappingRelations">
-          <bibl xml:lang="en"><orgName>W3C</orgName>: <title>SKOS Simple Knowledge Organization System Reference</title>, W3C Recommendation 18 August 2009, section 10 (mapping properties). <ref target="https://www.w3.org/TR/skos-reference/">https://www.w3.org/TR/skos-reference/</ref></bibl>
-          <category xml:id="skos-closeMatch" source="http://www.w3.org/2004/02/skos/core#closeMatch">
-            <catDesc xml:lang="de">nahestehender Begriff</catDesc>
-            <catDesc xml:lang="en">close concept</catDesc>
-          </category>
-          <category xml:id="skos-broadMatch" source="http://www.w3.org/2004/02/skos/core#broadMatch">
-            <catDesc xml:lang="de">weiterer Begriff</catDesc>
-            <catDesc xml:lang="en">broader concept</catDesc>
-          </category>
-          <category xml:id="skos-narrowMatch" source="http://www.w3.org/2004/02/skos/core#narrowMatch">
-            <catDesc xml:lang="de">engerer Begriff</catDesc>
-            <catDesc xml:lang="en">narrower concept</catDesc>
-          </category>
-        </taxonomy>
-        <taxonomy xml:id="noteTypes">
-          <category xml:id="note-categories">
-            <catDesc xml:lang="de">Kategorien</catDesc>
-            <catDesc xml:lang="en">categories</catDesc>
-          </category>
-          <category xml:id="note-identifiers">
-            <catDesc xml:lang="de">Identifikatoren</catDesc>
-            <catDesc xml:lang="en">identifiers</catDesc>
-          </category>
-          <category xml:id="note-cardinality">
-            <catDesc xml:lang="de">Kardinalität (Verhältnis zu anderen Begriffen)</catDesc>
-            <catDesc xml:lang="en">cardinality (relation to other terms)</catDesc>
-          </category>
-          <category xml:id="note-mapping">
-            <catDesc xml:lang="de">Mapping auf externe Modelle</catDesc>
-            <catDesc xml:lang="en">mapping to external models</catDesc>
-          </category>
-          <category xml:id="note-baserow">
-            <catDesc xml:lang="de">Baserow-Tabelle (Name und URL)</catDesc>
-            <catDesc xml:lang="en">Baserow table (name and URL)</catDesc>
-          </category>
-          <category xml:id="note-tei">
-            <catDesc xml:lang="de">TEI-Element(e) im Projektschema</catDesc>
-            <catDesc xml:lang="en">TEI element(s) in the project schema</catDesc>
-          </category>
-        </taxonomy>
-      </classDecl>
-      <editorialDecl>
-        <p xml:lang="de">Jeder Begriff des Glossars ist ein <gi>entry</gi>: der Begriff als <gi>form</gi> (<att>type</att>=<val>lemma</val>), die Definition(en) als <gi>sense</gi>/<gi>def</gi> (Lesarten a./b. über <att>n</att>), alle übrigen Felder als <gi>note</gi> mit <att>type</att>. Sprachabhängige Felder liegen als Paar de/en vor (<att>xml:lang</att>); sprachneutrale Angaben stehen einmalig ohne <att>xml:lang</att>. Die in der Vorlage mit „&gt;“ markierten Verweise sind als <gi>ref</gi> mit <att>target</att> codiert; Verweise auf eine bestimmte Lesart zeigen auf die <att>xml:id</att> des jeweiligen <gi>sense</gi>. Die Werte von <gi>note</gi>/<att>type</att> sind in der <gi>taxonomy</gi> <ref target="#noteTypes">noteTypes</ref> (<gi>classDecl</gi>) erklärt; sie entsprechen der <att>xml:id</att> der jeweiligen <gi>category</gi> ohne das Präfix <val>note-</val>. Die für das Mapping genutzten Ressourcen stehen als <gi>listBibl</gi> (<att>xml:id</att>=<val>mappingSources</val>) am Ende des Glossars (<gi>div</gi> <att>type</att>=<val>sources</val>).
-        </p>
-        <p xml:lang="en">Each glossary term is an <gi>entry</gi>: the term as <gi>form</gi> (<att>type</att>=<val>lemma</val>), the definition(s) as <gi>sense</gi>/<gi>def</gi> (senses a./b. via <att>n</att>), all other fields as <gi>note</gi> with <att>type</att>. Language-dependent fields are given as a de/en pair (<att>xml:lang</att>); language-neutral data appear once without <att>xml:lang</att>. Cross-references marked with “&gt;” in the source are encoded as <gi>ref</gi> with <att>target</att>; references to a specific sense point to the <att>xml:id</att> of the respective <gi>sense</gi>. The values of <gi>note</gi>/<att>type</att> are defined in the <gi>taxonomy</gi> <ref target="#noteTypes">noteTypes</ref> (<gi>classDecl</gi>); they correspond to the <att>xml:id</att> of the respective <gi>category</gi> without the prefix <val>note-</val>. The resources used for the mapping are given as a <gi>listBibl</gi> (<att>xml:id</att>=<val>mappingSources</val>) at the end of the glossary (<gi>div</gi> <att>type</att>=<val>sources</val>).
-        </p>
-      </editorialDecl>
-    </encodingDesc>
-    <profileDesc>
-      <langUsage>
-        <language ident="de"/>
-        <language ident="en"/>
-      </langUsage>
-    </profileDesc>
-    <revisionDesc status="draft">
-      <change xml:lang="de" when="2026-10-13">Arbeitsfassung.</change>
-      <change xml:lang="en" when="2026-10-13">Working draft.</change>
-    </revisionDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <div type="glossary">
-        <head xml:lang="de">Glossar</head>
-        <head xml:lang="en">Glossary</head>
-
-        <entry xml:id="faksimile">
-          <form type="lemma" xml:lang="de"><orth>Faksimile</orth></form>
-          <form type="lemma" xml:lang="en"><orth>facsimile</orth></form>
-          <sense>
-            <def xml:lang="de">Digitale 2D-Repräsentation einer der Seiten / Ansichten eines <ref target="#traeger">Trägers</ref>.</def>
-            <def xml:lang="en">Digital 2D representation of one of the pages / views of a <ref target="#traeger">carrier</ref>.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>Zur Publikation y/n</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>For publication y/n</item>
-            </list>
-          </note>
-          <note type="identifiers" xml:lang="de">
-            <list>
-              <item>Foliierung, Paginierung</item>
-            </list>
-          </note>
-          <note type="identifiers" xml:lang="en">
-            <list>
-              <item>Foliation, pagination</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zum <ref target="#traeger">Träger</ref>: <num>n:1</num> (meist <num>2:1</num>)</item>
-              <item>Verhältnis zur <ref target="#transkription">Transkription</ref>: <num>1:n</num> (meist <num>1:1</num>)</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#traeger">carrier</ref>: <num>n:1</num> (mostly <num>2:1</num>)</item>
-              <item>Relation to the <ref target="#transkription">transcription</ref>: <num>1:n</num> (mostly <num>1:1</num>)</item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="de">
-            <list>
-              <item>P. Sahle, Text-Rad: TextZ</item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="en">
-            <list>
-              <item>P. Sahle, text wheel (Text-Rad): TextZ</item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-broadMatch"><ref target="https://www.edlex.de/index.php?title=Faksimile"><term>Faksimile</term></ref> (<ref target="#src-edlex">Edlex</ref>)</item>
-              <item cert="high" ana="#skos-broadMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/facsimile.html"><term>facsimile</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">facs</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532</ref></note>
-          <note type="tei" xml:lang="de"><gi>facsimile</gi>, darin genested <gi>surface</gi> mit <gi>zone</gi> für Regionen/Zeilen und, bei Komposit-Trägern, weitere <gi>surface</gi>.</note>
-          <note type="tei" xml:lang="en"><gi>facsimile</gi>, containing nested <gi>surface</gi> with <gi>zone</gi> for regions/lines and, for composite carriers, further <gi>surface</gi> elements.</note>
-        </entry>
-
-        <entry xml:id="traeger">
-          <form type="lemma" xml:lang="de"><orth>Träger</orth></form>
-          <form type="lemma" xml:lang="en"><orth>carrier</orth></form>
-          <sense n="a" xml:id="traeger-a">
-            <def xml:lang="de">Materieller Träger eines Texts (Dokument); individuelles Objekt mit mehreren möglichen Ansichten/Seiten (<ref target="#faksimile">Faksimile</ref>).</def>
-            <def xml:lang="en">Material carrier of a text (document); individual object with several possible views/pages (<ref target="#faksimile">facsimile</ref>).</def>
-          </sense>
-          <sense n="b" xml:id="traeger-b">
-            <def xml:lang="de">(Projektintern, vom Datenmodell induziert) Immaterielle, rekonstruierte Entität, die zwei Faksimiles verbindet, die jeweils recto und verso des entsprechenden individuellen Objekts bilden würden.</def>
-            <def xml:lang="en">(Project-internal, induced by the data model) Immaterial, reconstructed entity connecting two facsimiles which would respectively form the recto and verso of the corresponding individual object.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>Zugehörigkeit zu einem <ref target="#teildossier">Teildossier</ref></item>
-              <item>Art und Zusammensetzung (Fahne, Fahne auf Makulatur, Zeitungsausschnitt, Kompositträger, ...)</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>Belonging to a <ref target="#teildossier">sub-dossier</ref></item>
-              <item>Type and composition (galley proof, galley proof on waste paper, newspaper clipping, composite carrier, ...)</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zum <ref target="#faksimile">Faksimile</ref>: <num>1:n</num> (meist <num>1:2</num>)</item>
-              <item>Verhältnis zum <ref target="#teildossier">Teildossier</ref>: <num>1..n:1</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#faksimile">facsimile</ref>: <num>1:n</num> (mostly <num>1:2</num>)</item>
-              <item>Relation to the <ref target="#teildossier">sub-dossier</ref>: <num>1..n:1</num></item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="de">
-            <list>
-              <item>P. Sahle, Text-Rad: TextD</item>
-              <item>F5 Item</item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="en">
-            <list>
-              <item>P. Sahle, text wheel (Text-Rad): TextD</item>
-              <item>F5 Item</item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" corresp="#traeger-a" ana="#skos-broadMatch"><ref target="http://e-editiones.ch/ontology/information-carrier#Carrier"><term>information carrier</term></ref> (<ref target="#src-eed">e-editiones</ref>)</item>
-              <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch"><ref target="http://purl.org/critical-edition-ontology#WitnessCarrier"><term>Witness Carrier</term></ref> (<ref target="#src-ceo">CEO</ref>)</item>
-              <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch"><ref target="https://www.edlex.de/index.php?title=Texttr%C3%A4ger"><term>Textträger</term></ref> (<ref target="#src-edlex">Edlex</ref>)</item>
-              <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/textCarrier.html"><term>text carrier</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-              <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/document.html"><term>document</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-              <item cert="high" corresp="#traeger-b" ana="#skos-closeMatch"><ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surfaceGrp.html"><gi>surfaceGrp</gi></ref> (<ref target="#src-tei">TEI</ref>)</item>
-              <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch"><ref target="https://www.digitale-edition.at/o:konde.27"><term>Text / Dokument</term></ref> (<ref target="#src-konde">KONDE</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">carriers</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5784/16540">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5784/16540</ref></note>
-        </entry>
-
-        <entry xml:id="teildossier">
-          <form type="lemma" xml:lang="de"><orth>Teildossier</orth></form>
-          <form type="lemma" xml:lang="en"><orth>sub-dossier</orth></form>
-          <sense n="a" xml:id="teildossier-a">
-            <def xml:lang="de">Aus der Textentstehung und Textordnung (d.h. diachron und synchron bestimmte) virtuelle Zusammenstellung mehrerer <ref target="#traeger-a">Träger (a.)</ref>. Entlang einer zeitlichen Achse angeordnet, können mehrere Teildossiers die Abfolge der Textentstehung auf materieller Ebene darstellen. Einzelne Teildossiers tragen Textausschnitte in Form von 1..n Textstufen (Grundschicht, kohärente Korrekturschichten).</def>
-            <def xml:lang="en">Virtual compilation of several <ref target="#traeger-a">carriers (a.)</ref>, determined by the genesis and the order of the text (i.e. diachronically and synchronically). Arranged along a temporal axis, several sub-dossiers can represent the sequence of text genesis on a material level. Individual sub-dossiers carry text excerpts in the form of 1..n text stages (base layer, coherent correction layers).</def>
-          </sense>
-          <sense n="b" xml:id="teildossier-b">
-            <def xml:lang="de">(Projektintern, vom Datenmodell induziert) Virtuelle Zusammenstellung mehrerer <ref target="#traeger-b">Träger (b.)</ref>, in diesem Fall zumeist: der publizierten <ref target="#textStufe">Stufe</ref> von Texten, die in einem genetischen / intertextuellen Verhältnis zum <ref target="#werk">Werk</ref> „<title xml:lang="de">Der Hort der Republik</title>“ stehen.</def>
-            <def xml:lang="en">(Project-internal, induced by the data model) Virtual compilation of several <ref target="#traeger-b">carriers (b.)</ref>, in this case mostly: of the published <ref target="#textStufe">stage</ref> of texts that stand in a genetic / intertextual relation to the <ref target="#werk">work</ref> “<title xml:lang="de">Der Hort der Republik</title>”.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>avant-texte vs. Text vs. rekonstruierter avant-texte vs. erweiterter avant-texte</item>
-              <item>Zugehörigkeit zur Textmontage vs. zum kontinuierlichen Text (vs. zum Paratext)</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>avant-texte vs. text vs. reconstructed avant-texte vs. extended avant-texte</item>
-              <item>Belonging to the text montage vs. to the continuous text (vs. to the paratext)</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zum <ref target="#traeger">Träger</ref>: <num>1:1..n</num></item>
-              <item>Verhältnis zur <ref target="#teildossierTranskription">Teildossier-Transkription</ref>: <num>1:1</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#traeger">carrier</ref>: <num>1:1..n</num></item>
-              <item>Relation to the <ref target="#teildossierTranskription">sub-dossier transcription</ref>: <num>1:1</num></item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-broadMatch"><ref target="https://w3id.org/geno#GeneticDossier"><term>Genetic dossier</term></ref> (<ref target="#src-geno">GENO</ref>)</item>
-              <item cert="high" ana="#skos-broadMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/geneticDossier.html"><term>genetic dossier</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-              <item cert="medium" ana="#skos-broadMatch"><ref target="http://www.w3.org/ns/prov#Collection"><term>Collection</term></ref> (<ref target="#src-prov">PROV-O</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">sub_dossiers</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533</ref></note>
-        </entry>
-
-        <entry xml:id="transkription">
-          <form type="lemma" xml:lang="de"><orth>Transkription</orth></form>
-          <form type="lemma" xml:lang="en"><orth>transcription</orth></form>
-          <sense>
-            <def xml:lang="de">Regelgeleitete Entzifferung des Texts eines <ref target="#faksimile">Faksimiles</ref>, im Projektkontext: als TEI-XML</def>
-            <def xml:lang="en">Rule-guided deciphering of the text of a <ref target="#faksimile">facsimile</ref>, in the project context: as TEI-XML</def>
-          </sense>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zur <ref target="#teildossierTranskription">Teildossier-Transkription</ref>: <num>1..n:1</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#teildossierTranskription">sub-dossier transcription</ref>: <num>1..n:1</num></item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-broadMatch"><ref target="http://e-editiones.ch/ontology/text#TranscribedText"><term>transcribed text</term></ref> (<ref target="#src-eed">e-editiones</ref>)</item>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/transcription.html"><term>transcription</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://www.digitale-edition.at/o:konde.197"><term>Transkription</term></ref> (<ref target="#src-konde">KONDE</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">facs</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532</ref></note>
-          <note type="tei"><gi>text</gi>/<gi>body</gi></note>
-        </entry>
-
-        <entry xml:id="teildossierTranskription">
-          <form type="lemma" xml:lang="de"><orth>Teildossier-Transkription</orth></form>
-          <form type="lemma" xml:lang="en"><orth>sub-dossier transcription</orth></form>
-          <sense>
-            <def xml:lang="de">Zusammenstellung der <ref target="#transkription">Transkriptionen</ref> von <ref target="#traeger">Trägern</ref>, die gemeinsam ein <ref target="#teildossier">Teildossier</ref> ergeben. Eine Teildossier-Transkription entspricht damit einem Teildossier und enthält dessen sämtliche <ref target="#textStufe">Textstufen</ref> vollständig.</def>
-            <def xml:lang="en">Compilation of the <ref target="#transkription">transcriptions</ref> of <ref target="#traeger">carriers</ref> that together make up a <ref target="#teildossier">sub-dossier</ref>. A sub-dossier transcription thus corresponds to a sub-dossier and contains all of its <ref target="#textStufe">text stages</ref> completely.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>enthält Anzahl an <ref target="#textStufe">Textstufen</ref>: 1 vs. &gt;1</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>contains number of <ref target="#textStufe">text stages</ref>: 1 vs. &gt;1</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zur <ref target="#transkription">Transkription</ref>: <num>1..n:1</num></item>
-              <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref>: <num>1:1..n</num></item>
-              <item>Verhältnis zum <ref target="#teildossier">Teildossier</ref>: <num>1:1</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#transkription">transcription</ref>: <num>1..n:1</num></item>
-              <item>Relation to the <ref target="#textStufe">text stage</ref>: <num>1:1..n</num></item>
-              <item>Relation to the <ref target="#teildossier">sub-dossier</ref>: <num>1:1</num></item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">sub_dossiers</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533</ref></note>
-        </entry>
-
-        <entry xml:id="textStufe">
-          <form type="lemma" xml:lang="de"><orth>Textstufe</orth></form>
-          <form type="lemma" xml:lang="en"><orth>text stage</orth></form>
-          <sense>
-            <def xml:lang="de">Eine einer <ref target="#teildossierTranskription">Teildossier-Transkription</ref> entnehmbare Zeichenfolge, die dieser im Umfang entspricht und den Zustand des in ihr enthaltenen Texts zu einem bestimmten Zeitpunkt repräsentiert. Kann das <ref target="#werk">Werk</ref> vollständig oder unvollständig enthalten.</def>
-            <def xml:lang="en">A sequence of characters extractable from a <ref target="#teildossierTranskription">sub-dossier transcription</ref>, which corresponds to it in extent and represents the state of the text contained in it at a particular point in time. May contain the <ref target="#werk">work</ref> completely or incompletely.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>vollständig y/n</item>
-              <item>enthält lokale Schichten y/n</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>complete y/n</item>
-              <item>contains local layers y/n</item>
-            </list>
-          </note>
-          <note type="identifiers" xml:lang="de">
-            <list>
-              <item>synchrone Einordnung</item>
-              <item>diachrone Einordnung</item>
-            </list>
-          </note>
-          <note type="identifiers" xml:lang="en">
-            <list>
-              <item>synchronic position</item>
-              <item>diachronic position</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zum <ref target="#teildossier">Teildossier</ref>: <num>1..n:1</num></item>
-              <item>Verhältnis zum <ref target="#segment">Segment</ref>: <num>1:1..n</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#teildossier">sub-dossier</ref>: <num>1..n:1</num></item>
-              <item>Relation to the <ref target="#segment">segment</ref>: <num>1:1..n</num></item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="de">
-            <list>
-              <item>P. Sahle, Text-Rad: TextF</item>
-              <item>(Vollständige Textstufe:) F2 Expression / F3 Manifestation</item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="en">
-            <list>
-              <item>P. Sahle, text wheel (Text-Rad): TextF</item>
-              <item>(Complete text stage:) F2 Expression / F3 Manifestation</item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://www.edlex.de/index.php?title=Textstufe"><term>Textstufe</term></ref> (<ref target="#src-edlex">Edlex</ref>)</item>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/textStage.html"><term>text (stage)</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">stages</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5782/16538">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5782/16538</ref></note>
-        </entry>
-
-        
-        <entry xml:id="segment">
-          <form type="lemma" xml:lang="de"><orth>Segment</orth></form>
-          <form type="lemma" xml:lang="en"><orth>segment</orth></form>
-          <sense>
-            <def xml:lang="de">Teil einer <ref target="#textStufe">Textstufe</ref>, definiert durch grammatikalisch, strukturell oder genetisch bedingte Grenzen. Im Projektkontext: Textmontage-Elemente oder Absätze im Fließtext stellen strukturell definierte, Sätze stellen grammatikalisch definierte, Zeitungszitate (oft quer zu Absatz- oder Satzgrenzen) aus der Textgenese resultierende Segmente dar. Korrespondierende Segmente über mehrere <ref target="#textStufe">Textstufen</ref> hinweg repräsentieren die Textgenese in textueller Hinsicht.</def>
-            <def xml:lang="en">Part of a <ref target="#textStufe">text stage</ref>, defined by grammatically, structurally or genetically determined boundaries. In the project context: text montage elements or paragraphs in running text represent structurally defined segments, sentences represent grammatically defined segments, newspaper quotations (often cutting across paragraph or sentence boundaries) represent segments resulting from the text genesis. Corresponding segments across several <ref target="#textStufe">text stages</ref> represent the text genesis in textual terms.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>Definitionsgrundlage (strukturell, grammatikalisch, genetisch)</item>
-              <item>Zugehörigkeit zur Textmontage vs. zum kontinuierlichen Text (vs. zum Paratext – Titel S. 1)</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>Basis of definition (structural, grammatical, genetic)</item>
-              <item>Belonging to the text montage vs. to the continuous text (vs. to the paratext – title p. 1)</item>
-            </list>
-          </note>
-          <note type="identifiers" xml:lang="de">
-            <list>
-              <item>synchrone Einordnung</item>
-              <item>diachrone Einordnung</item>
-            </list>
-          </note>
-          <note type="identifiers" xml:lang="en">
-            <list>
-              <item>synchronic position</item>
-              <item>diachronic position</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#textStufe">text stage</ref></item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/segment.html"><term>segment</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">macro_segments</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5783/16539">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5783/16539</ref></note>
-        </entry>
-
-        <entry xml:id="textSchicht">
-          <form type="lemma" xml:lang="de"><orth>Textschicht</orth></form>
-          <form type="lemma" xml:lang="en"><orth>text layer</orth></form>
-          <sense>
-            <def xml:lang="de">Eine aus einem distinkten Arbeitsschritt in der Textentstehung bestehende Zusammenstellung von Eingriffen; kann lokal begrenzt oder über ein ganzes <ref target="#teildossier">Teildossier</ref> kohärent sein und damit eine <ref target="#textStufe">Textstufe</ref> repräsentieren. Die Grundschicht entspricht etwa der jeweils ersten Textstufe eines Teildossiers.</def>
-            <def xml:lang="en">A compilation of interventions consisting of a distinct work step in the genesis of the text; may be locally limited or coherent across a whole <ref target="#teildossier">sub-dossier</ref> and thus represent a <ref target="#textStufe">text stage</ref>. The base layer corresponds roughly to the respective first text stage of a sub-dossier.</def>
-          </sense>
-          <note type="categories" xml:lang="de">
-            <list>
-              <item>entspricht einer Textstufe y/n</item>
-            </list>
-          </note>
-          <note type="categories" xml:lang="en">
-            <list>
-              <item>corresponds to a text stage y/n</item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref>: <num>1..n:1</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#textStufe">text stage</ref>: <num>1..n:1</num></item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-narrowMatch"><ref target="https://www.edlex.de/index.php?title=Revisionsschicht"><term>Revisionsschicht</term></ref> (<ref target="#src-edlex">Edlex</ref>)</item>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/writingStage.html"><term>writing stage</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-            </list>
-          </note>
-        </entry>
-
-        
-        <entry xml:id="werk">
-          <form type="lemma" xml:lang="de"><orth>Werk</orth></form>
-          <form type="lemma" xml:lang="en"><orth>work</orth></form>
-          <sense>
-            <def xml:lang="de">Im Projektkontext: Zusammenstellung mehrerer textgenetisch oder stemmatologisch zusammengehöriger <ref target="#textStufe">Textstufen</ref>.</def>
-            <def xml:lang="en">In the project context: compilation of several <ref target="#textStufe">text stages</ref> belonging together in terms of text genesis or stemmatology.</def>
-          </sense>
-          <note type="cardinality" xml:lang="de">
-            <list>
-              <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref>: <num>1:1..n</num></item>
-            </list>
-          </note>
-          <note type="cardinality" xml:lang="en">
-            <list>
-              <item>Relation to the <ref target="#textStufe">text stage</ref>: <num>1:1..n</num></item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="de">
-            <list>
-              <item>P. Sahle, Text-Rad: TextW</item>
-              <item>F1 Work / F2 Expression</item>
-            </list>
-          </note>
-          <note type="mapping" xml:lang="en">
-            <list>
-              <item>P. Sahle, text wheel (Text-Rad): TextW</item>
-              <item>F1 Work / F2 Expression</item>
-            </list>
-          </note>
-          <note type="mapping" subtype="concepts">
-            <list>
-              <item cert="high" ana="#skos-closeMatch"><ref target="https://lexiconse.uantwerpen.be/lexicon/textWork.html"><term>text (work)</term></ref> (<ref target="#src-lexiconse">LexiconSE</ref>)</item>
-              <item cert="medium" ana="#skos-broadMatch"><ref target="https://cidoc-crm.org/sites/default/files/LRMoo_V1.1.1.pdf#page=30"><term>F1 Work</term></ref> (<ref target="#src-lrmoo">LRMoo</ref>)</item>
-              <item cert="medium" ana="#skos-broadMatch"><ref target="http://purl.org/critical-edition-ontology#F1_Work"><term>F1 Work</term></ref> (<ref target="#src-ceo">CEO</ref>)</item>
-            </list>
-          </note>
-          <note type="baserow"><idno type="baserowTable">works</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5794/16550">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5794/16550</ref></note>
-        </entry>
-      </div>
-
-      <div type="sources">
-        <listBibl xml:id="mappingSources">
-          <head xml:lang="de">Für das Mapping genutzte Ressourcen</head>
-          <head xml:lang="en">Resources searched for the mapping</head>
-          <bibl xml:id="src-eed" xml:lang="en"><author>Hans Cools</author>; <author>Hugues Marchal</author>; <author>Roberta Padlina</author> (<orgName>Universities of Basel, Bern and Zürich</orgName>): <title>Scholarly Editing: An ontology about scientific editing</title>. <ref target="http://e-editiones.ch/ontology/scholarly-editing">http://e-editiones.ch/ontology/scholarly-editing</ref> (imported modules: <ref target="http://e-editiones.ch/ontology/information-carrier">information-carrier</ref>, <ref target="http://e-editiones.ch/ontology/text">text</ref>, <ref target="http://e-editiones.ch/ontology/document">document</ref>) [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-lrmoo" xml:lang="en"><author>Chryssoula Bekiari</author>; <author>Martin Doerr</author>; <author>Patrick Le Bœuf</author>; <author>Pat Riva</author> (eds.) (<orgName>IFLA LRMoo Working Group / CIDOC CRM Special Interest Group</orgName>): <title>LRMoo: Object-oriented definition and mapping from the IFLA Library Reference Model</title>, version 1.1.1. <ref target="https://cidoc-crm.org/sites/default/files/LRMoo_V1.1.1.pdf">https://cidoc-crm.org/sites/default/files/LRMoo_V1.1.1.pdf</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-ceo" xml:lang="en"><author>Chiara Martignano</author>: <title>Critical Edition Ontology (CEO)</title>. <ref target="https://chiaramartignano.github.io/critical-edition-ontology">https://chiaramartignano.github.io/critical-edition-ontology</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-edlex" xml:lang="de"><author>Roland S. Kamzelak</author> (Begründer): <title>Editionslexikon Edlex</title>. <ref target="https://edlex.de">https://edlex.de</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-cao" xml:lang="en"><author>Francesca Giovannetti</author>: <title>The Critical Apparatus Ontology (CAO)</title>, release 2019-07-08. <ref target="https://fgiovannetti.github.io/cao/">https://fgiovannetti.github.io/cao/</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-geno" xml:lang="en"><author>Elena Spadini</author>; <author>Alessio Christen</author>: <title>GENO, the Genetic Networks Ontology</title>. <ref target="https://gen-o.github.io">https://gen-o.github.io</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-hmml" xml:lang="en"><orgName>Hill Museum &amp; Manuscript Library (HMML)</orgName>: <title>Lexicon Terms and Search: Terms used in manuscript studies</title>. <ref target="https://hmmlschool.org/lexicon">https://hmmlschool.org/lexicon</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-interpares" xml:lang="en"><author>Luciana Duranti</author>; <author>Victoria Lemieux</author>; <author>Richard Pearce-Moses</author> (eds.) (<orgName>InterPARES Trust</orgName>): <title>InterPARES Trust – Terminology Database</title>. <ref target="https://interparestrust.org/terminology">https://interparestrust.org/terminology</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-lexiconse" xml:lang="en"><author>Wout Dillen</author> (<orgName>Centre for Manuscript Genetics, Universiteit Antwerpen; European Society for Textual Scholarship</orgName>): <title>LexiconSE: A Lexicon for Scholarly Editing</title>. <ref target="https://lexiconse.uantwerpen.be/lexicon">https://lexiconse.uantwerpen.be/lexicon</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-tei" xml:lang="en"><orgName>TEI Consortium</orgName>: <title>TEI Guidelines, Appendix C: Elements</title>, P5 version 4.12.0. <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-pls" xml:lang="en"><author>Caroline Macé</author>; <author>Philipp Roelli</author> (eds.); <author>Odd Einar Haugen</author> (<orgName>Studia Stemmatologica</orgName>): <title>Parvum lexicon stemmatologicum: A brief lexicon of stemmatology</title>. <ref target="https://wiki.helsinki.fi/xwiki/bin/view/stemmatology">https://wiki.helsinki.fi/xwiki/bin/view/stemmatology</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-prov" xml:lang="en"><author>Timothy Lebo</author>; <author>Satya Sahoo</author>; <author>Deborah McGuinness</author> (eds.) (<orgName>W3C Provenance Working Group</orgName>): <title>PROV-O: The PROV Ontology</title>. W3C Recommendation 30 April 2013. <ref target="https://www.w3.org/TR/2013/REC-prov-o-20130430/">https://www.w3.org/TR/2013/REC-prov-o-20130430/</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-          <bibl xml:id="src-konde" xml:lang="de"><orgName>Weißbuch „Digitale Edition“ (KONDE – Kompetenznetzwerk Digitale Edition)</orgName>: <title>Begriffe</title>. <ref target="https://www.digitale-edition.at/archive/objects/context:konde/methods/sdef:Context/get?mode=terms">https://www.digitale-edition.at/archive/objects/context:konde/methods/sdef:Context/get?mode=terms</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]</bibl>
-        </listBibl>
-      </div>
-    </body>
-  </text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="a" type="main" xml:lang="de">Projekt-Glossar zum Datenmodell</title>
+                <title level="a" type="main" xml:lang="en">Data Model Project Glossary</title>
+                <title level="m" type="main" xml:lang="en">
+                    Karl Kraus: Der Hort der Republik – Digital Genetic
+                    Edition
+                </title>
+                <title level="m" type="main" xml:lang="de">
+                    Karl Kraus: Der Hort der Republik – Digitale
+                    Genetische Edition
+                </title>
+                <respStmt>
+                    <resp xml:lang="de">Team – Entwickler:innen</resp>
+                    <resp xml:lang="en">Team – Developers</resp>
+                    <persName key="https://orcid.org/0000-0002-9575-9372">Peter Andorfer</persName>
+                    <persName key="https://orcid.org/0009-0004-9615-9389">Barbara Krautgartner</persName>
+                    <persName key="https://orcid.org/0009-0009-4161-9532">Kinga Sramó</persName>
+                </respStmt>
+                <respStmt>
+                    <resp xml:lang="de">Team – Editor:innen</resp>
+                    <resp xml:lang="en">Team – Editors</resp>
+                    <persName key="https://orcid.org/0000-0002-5049-0779">Isabel Langkabel</persName>
+                    <persName key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</persName>
+                    <persName key="https://orcid.org/0000-0003-3487-3611">Isabella Schwentner</persName>
+                </respStmt>
+                <principal key="https://orcid.org/0000-0001-8609-2433">Bernhard Oberreither</principal>
+                <funder>
+                    <name xml:lang="de">Österreichischer Wissenschaftsfonds FWF</name>
+                    <name xml:lang="en">Austrian Science Fund FWF</name>
+                    <address>
+                        <street>Georg-Coch-Platz 2</street>
+                        <postCode>1010 Wien</postCode>
+                        <placeName>
+                            <country>A</country>
+                            <settlement>Wien</settlement>
+                        </placeName>
+                    </address>
+                </funder>
+            </titleStmt>
+            <publicationStmt>
+                <publisher key="https://d-nb.info/gnd/1228367132">Ludwig Boltzmann Institute for Digital History</publisher>
+                <publisher key="https://d-nb.info/gnd/1123037736">Austrian Centre for Digital Humanities</publisher>
+                <pubPlace>Vienna</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="mappingRelations">
+                    <bibl xml:lang="en">
+                        <orgName>W3C</orgName>: <title>SKOS Simple Knowledge Organization System Reference</title>, W3C Recommendation 18 August 2009, section 10 (mapping properties). <ref target="https://www.w3.org/TR/skos-reference/">https://www.w3.org/TR/skos-reference/</ref>
+                    </bibl>
+                    <category xml:id="skos-closeMatch" source="http://www.w3.org/2004/02/skos/core#closeMatch">
+                        <catDesc xml:lang="de">nahestehender Begriff</catDesc>
+                        <catDesc xml:lang="en">close concept</catDesc>
+                    </category>
+                    <category xml:id="skos-broadMatch" source="http://www.w3.org/2004/02/skos/core#broadMatch">
+                        <catDesc xml:lang="de">weiterer Begriff</catDesc>
+                        <catDesc xml:lang="en">broader concept</catDesc>
+                    </category>
+                    <category xml:id="skos-narrowMatch" source="http://www.w3.org/2004/02/skos/core#narrowMatch">
+                        <catDesc xml:lang="de">engerer Begriff</catDesc>
+                        <catDesc xml:lang="en">narrower concept</catDesc>
+                    </category>
+                </taxonomy>
+                <taxonomy xml:id="noteTypes">
+                    <category xml:id="note-categories">
+                        <catDesc xml:lang="de">Kategorien</catDesc>
+                        <catDesc xml:lang="en">categories</catDesc>
+                    </category>
+                    <category xml:id="note-identifiers">
+                        <catDesc xml:lang="de">Identifikatoren</catDesc>
+                        <catDesc xml:lang="en">identifiers</catDesc>
+                    </category>
+                    <category xml:id="note-cardinality">
+                        <catDesc xml:lang="de">Kardinalität (Verhältnis zu anderen Begriffen)</catDesc>
+                        <catDesc xml:lang="en">cardinality (relation to other terms)</catDesc>
+                    </category>
+                    <category xml:id="note-mapping">
+                        <catDesc xml:lang="de">Mapping auf externe Modelle</catDesc>
+                        <catDesc xml:lang="en">mapping to external models</catDesc>
+                    </category>
+                    <category xml:id="note-baserow">
+                        <catDesc xml:lang="de">Baserow-Tabelle (Name und URL)</catDesc>
+                        <catDesc xml:lang="en">Baserow table (name and URL)</catDesc>
+                    </category>
+                    <category xml:id="note-tei">
+                        <catDesc xml:lang="de">TEI-Element(e) im Projektschema</catDesc>
+                        <catDesc xml:lang="en">TEI element(s) in the project schema</catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+            <editorialDecl>
+                <p xml:lang="de">Jeder Begriff des Glossars ist ein <gi>entry</gi>: der Begriff als <gi>form</gi> (<att>type</att>=<val>lemma</val>), die Definition(en) als <gi>sense</gi>/<gi>def</gi> (Lesarten a./b. über <att>n</att>), alle übrigen Felder als <gi>note</gi> mit <att>type</att>. Sprachabhängige Felder liegen als Paar de/en vor (<att>xml:lang</att>); sprachneutrale Angaben stehen einmalig ohne <att>xml:lang</att>. Die in der Vorlage mit „&gt;“ markierten Verweise sind als <gi>ref</gi> mit <att>target</att> codiert; Verweise auf eine bestimmte Lesart zeigen auf die <att>xml:id</att> des jeweiligen <gi>sense</gi>. Die Werte von <gi>note</gi>/<att>type</att> sind in der <gi>taxonomy</gi>
+                    <ref target="#noteTypes">noteTypes</ref> (<gi>classDecl</gi>) erklärt; sie entsprechen der <att>xml:id</att> der jeweiligen <gi>category</gi> ohne das Präfix <val>note-</val>. Die für das Mapping genutzten Ressourcen stehen als <gi>listBibl</gi> (<att>xml:id</att>=<val>mappingSources</val>) am Ende des Glossars (<gi>div</gi>
+                    <att>type</att>=<val>sources</val>).
+                </p>
+                <p xml:lang="en">Each glossary term is an <gi>entry</gi>: the term as <gi>form</gi> (<att>type</att>=<val>lemma</val>), the definition(s) as <gi>sense</gi>/<gi>def</gi> (senses a./b. via <att>n</att>), all other fields as <gi>note</gi> with <att>type</att>. Language-dependent fields are given as a de/en pair (<att>xml:lang</att>); language-neutral data appear once without <att>xml:lang</att>. Cross-references marked with “&gt;” in the source are encoded as <gi>ref</gi> with <att>target</att>; references to a specific sense point to the <att>xml:id</att> of the respective <gi>sense</gi>. The values of <gi>note</gi>/<att>type</att> are defined in the <gi>taxonomy</gi>
+                    <ref target="#noteTypes">noteTypes</ref> (<gi>classDecl</gi>); they correspond to the <att>xml:id</att> of the respective <gi>category</gi> without the prefix <val>note-</val>. The resources used for the mapping are given as a <gi>listBibl</gi> (<att>xml:id</att>=<val>mappingSources</val>) at the end of the glossary (<gi>div</gi>
+                    <att>type</att>=<val>sources</val>).
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="de" />
+                <language ident="en" />
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change xml:lang="de" when="2026-10-13">Arbeitsfassung.</change>
+            <change xml:lang="en" when="2026-10-13">Working draft.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="glossary">
+                <head xml:lang="de">Glossar</head>
+                <head xml:lang="en">Glossary</head>
+                <entry xml:id="faksimile">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Faksimile</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>facsimile</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Digitale 2D-Repräsentation einer der Seiten / Ansichten eines <ref target="#traeger">Trägers</ref>.</def>
+                        <def xml:lang="en">Digital 2D representation of one of the pages / views of a <ref target="#traeger">carrier</ref>.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>Zur Publikation y/n</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>For publication y/n</item>
+                        </list>
+                    </note>
+                    <note type="identifiers" xml:lang="de">
+                        <list>
+                            <item>Foliierung, Paginierung</item>
+                        </list>
+                    </note>
+                    <note type="identifiers" xml:lang="en">
+                        <list>
+                            <item>Foliation, pagination</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zum <ref target="#traeger">Träger</ref>: <num>n:1</num> (meist <num>2:1</num>)</item>
+                            <item>Verhältnis zur <ref target="#transkription">Transkription</ref>: <num>1:n</num> (meist <num>1:1</num>)</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#traeger">carrier</ref>: <num>n:1</num> (mostly <num>2:1</num>)</item>
+                            <item>Relation to the <ref target="#transkription">transcription</ref>: <num>1:n</num> (mostly <num>1:1</num>)</item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="de">
+                        <list>
+                            <item>P. Sahle, Text-Rad: TextZ</item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="en">
+                        <list>
+                            <item>P. Sahle, text wheel (Text-Rad): TextZ</item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-broadMatch">
+                                <ref target="https://www.edlex.de/index.php?title=Faksimile">
+                                    <term>Faksimile</term>
+                                </ref> (<ref target="#src-edlex">Edlex</ref>)
+                            </item>
+                            <item cert="high" ana="#skos-broadMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/facsimile.html">
+                                    <term>facsimile</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">facs</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532</ref>
+                    </note>
+                    <note type="tei" xml:lang="de">
+                        <gi>facsimile</gi>, darin genested <gi>surface</gi> mit <gi>zone</gi> für Regionen/Zeilen und, bei Komposit-Trägern, weitere <gi>surface</gi>.
+                    </note>
+                    <note type="tei" xml:lang="en">
+                        <gi>facsimile</gi>, containing nested <gi>surface</gi> with <gi>zone</gi> for regions/lines and, for composite carriers, further <gi>surface</gi> elements.
+                    </note>
+                </entry>
+                <entry xml:id="traeger">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Träger</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>carrier</orth>
+                    </form>
+                    <sense n="a" xml:id="traeger-a">
+                        <def xml:lang="de">Materieller Träger eines Texts (Dokument); individuelles Objekt mit mehreren möglichen Ansichten/Seiten (<ref target="#faksimile">Faksimile</ref>).</def>
+                        <def xml:lang="en">Material carrier of a text (document); individual object with several possible views/pages (<ref target="#faksimile">facsimile</ref>).</def>
+                    </sense>
+                    <sense n="b" xml:id="traeger-b">
+                        <def xml:lang="de">(Projektintern, vom Datenmodell induziert) Immaterielle, rekonstruierte Entität, die zwei Faksimiles verbindet, die jeweils recto und verso des entsprechenden individuellen Objekts bilden würden.</def>
+                        <def xml:lang="en">(Project-internal, induced by the data model) Immaterial, reconstructed entity connecting two facsimiles which would respectively form the recto and verso of the corresponding individual object.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>Zugehörigkeit zu einem <ref target="#teildossier">Teildossier</ref></item>
+                            <item>Art und Zusammensetzung (Fahne, Fahne auf Makulatur, Zeitungsausschnitt, Kompositträger, ...)</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>Belonging to a <ref target="#teildossier">sub-dossier</ref></item>
+                            <item>Type and composition (galley proof, galley proof on waste paper, newspaper clipping, composite carrier, ...)</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zum <ref target="#faksimile">Faksimile</ref>: <num>1:n</num> (meist <num>1:2</num>)</item>
+                            <item>Verhältnis zum <ref target="#teildossier">Teildossier</ref>: <num>1..n:1</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#faksimile">facsimile</ref>: <num>1:n</num> (mostly <num>1:2</num>)</item>
+                            <item>Relation to the <ref target="#teildossier">sub-dossier</ref>: <num>1..n:1</num></item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="de">
+                        <list>
+                            <item>P. Sahle, Text-Rad: TextD</item>
+                            <item>F5 Item</item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="en">
+                        <list>
+                            <item>P. Sahle, text wheel (Text-Rad): TextD</item>
+                            <item>F5 Item</item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" corresp="#traeger-a" ana="#skos-broadMatch">
+                                <ref target="http://e-editiones.ch/ontology/information-carrier#Carrier">
+                                    <term>information carrier</term>
+                                </ref> (<ref target="#src-eed">e-editiones</ref>)
+                            </item>
+                            <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch">
+                                <ref target="http://purl.org/critical-edition-ontology#WitnessCarrier">
+                                    <term>Witness Carrier</term>
+                                </ref> (<ref target="#src-ceo">CEO</ref>)
+                            </item>
+                            <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch">
+                                <ref target="https://www.edlex.de/index.php?title=Texttr%C3%A4ger">
+                                    <term>Textträger</term>
+                                </ref> (<ref target="#src-edlex">Edlex</ref>)
+                            </item>
+                            <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/textCarrier.html">
+                                    <term>text carrier</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                            <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/document.html">
+                                    <term>document</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                            <item cert="high" corresp="#traeger-b" ana="#skos-closeMatch">
+                                <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surfaceGrp.html">
+                                    <gi>surfaceGrp</gi>
+                                </ref> (<ref target="#src-tei">TEI</ref>)
+                            </item>
+                            <item cert="high" corresp="#traeger-a" ana="#skos-closeMatch">
+                                <ref target="https://www.digitale-edition.at/o:konde.27">
+                                    <term>Text / Dokument</term>
+                                </ref> (<ref target="#src-konde">KONDE</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">carriers</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5784/16540">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5784/16540</ref>
+                    </note>
+                </entry>
+                <entry xml:id="teildossier">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Teildossier</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>sub-dossier</orth>
+                    </form>
+                    <sense n="a" xml:id="teildossier-a">
+                        <def xml:lang="de">Aus der Textentstehung und Textordnung (d.h. diachron und synchron bestimmte) virtuelle Zusammenstellung mehrerer <ref target="#traeger-a">Träger (a.)</ref>. Entlang einer zeitlichen Achse angeordnet, können mehrere Teildossiers die Abfolge der Textentstehung auf materieller Ebene darstellen. Einzelne Teildossiers tragen Textausschnitte in Form von 1..n Textstufen (Grundschicht, kohärente Korrekturschichten).</def>
+                        <def xml:lang="en">Virtual compilation of several <ref target="#traeger-a">carriers (a.)</ref>, determined by the genesis and the order of the text (i.e. diachronically and synchronically). Arranged along a temporal axis, several sub-dossiers can represent the sequence of text genesis on a material level. Individual sub-dossiers carry text excerpts in the form of 1..n text stages (base layer, coherent correction layers).</def>
+                    </sense>
+                    <sense n="b" xml:id="teildossier-b">
+                        <def xml:lang="de">(Projektintern, vom Datenmodell induziert) Virtuelle Zusammenstellung mehrerer <ref target="#traeger-b">Träger (b.)</ref>, in diesem Fall zumeist: der publizierten <ref target="#textStufe">Stufe</ref> von Texten, die in einem genetischen / intertextuellen Verhältnis zum <ref target="#werk">Werk</ref> „<title xml:lang="de">Der Hort der Republik</title>“ stehen.</def>
+                        <def xml:lang="en">(Project-internal, induced by the data model) Virtual compilation of several <ref target="#traeger-b">carriers (b.)</ref>, in this case mostly: of the published <ref target="#textStufe">stage</ref> of texts that stand in a genetic / intertextual relation to the <ref target="#werk">work</ref> “<title xml:lang="de">Der Hort der Republik</title>”.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>avant-texte vs. Text vs. rekonstruierter avant-texte vs. erweiterter avant-texte</item>
+                            <item>Zugehörigkeit zur Textmontage vs. zum kontinuierlichen Text (vs. zum Paratext)</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>avant-texte vs. text vs. reconstructed avant-texte vs. extended avant-texte</item>
+                            <item>Belonging to the text montage vs. to the continuous text (vs. to the paratext)</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zum <ref target="#traeger">Träger</ref>: <num>1:1..n</num></item>
+                            <item>Verhältnis zur <ref target="#teildossierTranskription">Teildossier-Transkription</ref>: <num>1:1</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#traeger">carrier</ref>: <num>1:1..n</num></item>
+                            <item>Relation to the <ref target="#teildossierTranskription">sub-dossier transcription</ref>: <num>1:1</num></item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-broadMatch">
+                                <ref target="https://w3id.org/geno#GeneticDossier">
+                                    <term>Genetic dossier</term>
+                                </ref> (<ref target="#src-geno">GENO</ref>)
+                            </item>
+                            <item cert="high" ana="#skos-broadMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/geneticDossier.html">
+                                    <term>genetic dossier</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                            <item cert="medium" ana="#skos-broadMatch">
+                                <ref target="http://www.w3.org/ns/prov#Collection">
+                                    <term>Collection</term>
+                                </ref> (<ref target="#src-prov">PROV-O</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">sub_dossiers</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533</ref>
+                    </note>
+                </entry>
+                <entry xml:id="transkription">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Transkription</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>transcription</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Regelgeleitete Entzifferung des Texts eines <ref target="#faksimile">Faksimiles</ref>, im Projektkontext: als TEI-XML</def>
+                        <def xml:lang="en">Rule-guided deciphering of the text of a <ref target="#faksimile">facsimile</ref>, in the project context: as TEI-XML</def>
+                    </sense>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zur <ref target="#teildossierTranskription">Teildossier-Transkription</ref>: <num>1..n:1</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#teildossierTranskription">sub-dossier transcription</ref>: <num>1..n:1</num></item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-broadMatch">
+                                <ref target="http://e-editiones.ch/ontology/text#TranscribedText">
+                                    <term>transcribed text</term>
+                                </ref> (<ref target="#src-eed">e-editiones</ref>)
+                            </item>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/transcription.html">
+                                    <term>transcription</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://www.digitale-edition.at/o:konde.197">
+                                    <term>Transkription</term>
+                                </ref> (<ref target="#src-konde">KONDE</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">facs</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5778/16532</ref>
+                    </note>
+                    <note type="tei">
+                        <gi>text</gi>/<gi>body</gi>
+                    </note>
+                </entry>
+                <entry xml:id="teildossierTranskription">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Teildossier-Transkription</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>sub-dossier transcription</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Zusammenstellung der <ref target="#transkription">Transkriptionen</ref> von <ref target="#traeger">Trägern</ref>, die gemeinsam ein <ref target="#teildossier">Teildossier</ref> ergeben. Eine Teildossier-Transkription entspricht damit einem Teildossier und enthält dessen sämtliche <ref target="#textStufe">Textstufen</ref> vollständig.</def>
+                        <def xml:lang="en">Compilation of the <ref target="#transkription">transcriptions</ref> of <ref target="#traeger">carriers</ref> that together make up a <ref target="#teildossier">sub-dossier</ref>. A sub-dossier transcription thus corresponds to a sub-dossier and contains all of its <ref target="#textStufe">text stages</ref> completely.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>enthält Anzahl an <ref target="#textStufe">Textstufen</ref>: 1 vs. &gt;1</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>contains number of <ref target="#textStufe">text stages</ref>: 1 vs. &gt;1</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zur <ref target="#transkription">Transkription</ref>: <num>1..n:1</num></item>
+                            <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref>: <num>1:1..n</num></item>
+                            <item>Verhältnis zum <ref target="#teildossier">Teildossier</ref>: <num>1:1</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#transkription">transcription</ref>: <num>1..n:1</num></item>
+                            <item>Relation to the <ref target="#textStufe">text stage</ref>: <num>1:1..n</num></item>
+                            <item>Relation to the <ref target="#teildossier">sub-dossier</ref>: <num>1:1</num></item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">sub_dossiers</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5779/16533</ref>
+                    </note>
+                </entry>
+                <entry xml:id="textStufe">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Textstufe</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>text stage</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Eine einer <ref target="#teildossierTranskription">Teildossier-Transkription</ref> entnehmbare Zeichenfolge, die dieser im Umfang entspricht und den Zustand des in ihr enthaltenen Texts zu einem bestimmten Zeitpunkt repräsentiert. Kann das <ref target="#werk">Werk</ref> vollständig oder unvollständig enthalten.</def>
+                        <def xml:lang="en">A sequence of characters extractable from a <ref target="#teildossierTranskription">sub-dossier transcription</ref>, which corresponds to it in extent and represents the state of the text contained in it at a particular point in time. May contain the <ref target="#werk">work</ref> completely or incompletely.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>vollständig y/n</item>
+                            <item>enthält lokale Schichten y/n</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>complete y/n</item>
+                            <item>contains local layers y/n</item>
+                        </list>
+                    </note>
+                    <note type="identifiers" xml:lang="de">
+                        <list>
+                            <item>synchrone Einordnung</item>
+                            <item>diachrone Einordnung</item>
+                        </list>
+                    </note>
+                    <note type="identifiers" xml:lang="en">
+                        <list>
+                            <item>synchronic position</item>
+                            <item>diachronic position</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zum <ref target="#teildossier">Teildossier</ref>: <num>1..n:1</num></item>
+                            <item>Verhältnis zum <ref target="#segment">Segment</ref>: <num>1:1..n</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#teildossier">sub-dossier</ref>: <num>1..n:1</num></item>
+                            <item>Relation to the <ref target="#segment">segment</ref>: <num>1:1..n</num></item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="de">
+                        <list>
+                            <item>P. Sahle, Text-Rad: TextF</item>
+                            <item>(Vollständige Textstufe:) F2 Expression / F3 Manifestation</item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="en">
+                        <list>
+                            <item>P. Sahle, text wheel (Text-Rad): TextF</item>
+                            <item>(Complete text stage:) F2 Expression / F3 Manifestation</item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://www.edlex.de/index.php?title=Textstufe">
+                                    <term>Textstufe</term>
+                                </ref> (<ref target="#src-edlex">Edlex</ref>)
+                            </item>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/textStage.html">
+                                    <term>text (stage)</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">stages</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5782/16538">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5782/16538</ref>
+                    </note>
+                </entry>
+                <entry xml:id="segment">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Segment</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>segment</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Teil einer <ref target="#textStufe">Textstufe</ref>, definiert durch grammatikalisch, strukturell oder genetisch bedingte Grenzen. Im Projektkontext: Textmontage-Elemente oder Absätze im Fließtext stellen strukturell definierte, Sätze stellen grammatikalisch definierte, Zeitungszitate (oft quer zu Absatz- oder Satzgrenzen) aus der Textgenese resultierende Segmente dar. Korrespondierende Segmente über mehrere <ref target="#textStufe">Textstufen</ref> hinweg repräsentieren die Textgenese in textueller Hinsicht.</def>
+                        <def xml:lang="en">Part of a <ref target="#textStufe">text stage</ref>, defined by grammatically, structurally or genetically determined boundaries. In the project context: text montage elements or paragraphs in running text represent structurally defined segments, sentences represent grammatically defined segments, newspaper quotations (often cutting across paragraph or sentence boundaries) represent segments resulting from the text genesis. Corresponding segments across several <ref target="#textStufe">text stages</ref> represent the text genesis in textual terms.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>Definitionsgrundlage (strukturell, grammatikalisch, genetisch)</item>
+                            <item>Zugehörigkeit zur Textmontage vs. zum kontinuierlichen Text (vs. zum Paratext – Titel S. 1)</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>Basis of definition (structural, grammatical, genetic)</item>
+                            <item>Belonging to the text montage vs. to the continuous text (vs. to the paratext – title p. 1)</item>
+                        </list>
+                    </note>
+                    <note type="identifiers" xml:lang="de">
+                        <list>
+                            <item>synchrone Einordnung</item>
+                            <item>diachrone Einordnung</item>
+                        </list>
+                    </note>
+                    <note type="identifiers" xml:lang="en">
+                        <list>
+                            <item>synchronic position</item>
+                            <item>diachronic position</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#textStufe">text stage</ref></item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/segment.html">
+                                    <term>segment</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">macro_segments</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5783/16539">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5783/16539</ref>
+                    </note>
+                </entry>
+                <entry xml:id="textSchicht">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Textschicht</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>text layer</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Eine aus einem distinkten Arbeitsschritt in der Textentstehung bestehende Zusammenstellung von Eingriffen; kann lokal begrenzt oder über ein ganzes <ref target="#teildossier">Teildossier</ref> kohärent sein und damit eine <ref target="#textStufe">Textstufe</ref> repräsentieren. Die Grundschicht entspricht etwa der jeweils ersten Textstufe eines Teildossiers.</def>
+                        <def xml:lang="en">A compilation of interventions consisting of a distinct work step in the genesis of the text; may be locally limited or coherent across a whole <ref target="#teildossier">sub-dossier</ref> and thus represent a <ref target="#textStufe">text stage</ref>. The base layer corresponds roughly to the respective first text stage of a sub-dossier.</def>
+                    </sense>
+                    <note type="categories" xml:lang="de">
+                        <list>
+                            <item>entspricht einer Textstufe y/n</item>
+                        </list>
+                    </note>
+                    <note type="categories" xml:lang="en">
+                        <list>
+                            <item>corresponds to a text stage y/n</item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref>: <num>1..n:1</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#textStufe">text stage</ref>: <num>1..n:1</num></item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-narrowMatch">
+                                <ref target="https://www.edlex.de/index.php?title=Revisionsschicht">
+                                    <term>Revisionsschicht</term>
+                                </ref> (<ref target="#src-edlex">Edlex</ref>)
+                            </item>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/writingStage.html">
+                                    <term>writing stage</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                        </list>
+                    </note>
+                </entry>
+                <entry xml:id="werk">
+                    <form type="lemma" xml:lang="de">
+                        <orth>Werk</orth>
+                    </form>
+                    <form type="lemma" xml:lang="en">
+                        <orth>work</orth>
+                    </form>
+                    <sense>
+                        <def xml:lang="de">Im Projektkontext: Zusammenstellung mehrerer textgenetisch oder stemmatologisch zusammengehöriger <ref target="#textStufe">Textstufen</ref>.</def>
+                        <def xml:lang="en">In the project context: compilation of several <ref target="#textStufe">text stages</ref> belonging together in terms of text genesis or stemmatology.</def>
+                    </sense>
+                    <note type="cardinality" xml:lang="de">
+                        <list>
+                            <item>Verhältnis zur <ref target="#textStufe">Textstufe</ref>: <num>1:1..n</num></item>
+                        </list>
+                    </note>
+                    <note type="cardinality" xml:lang="en">
+                        <list>
+                            <item>Relation to the <ref target="#textStufe">text stage</ref>: <num>1:1..n</num></item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="de">
+                        <list>
+                            <item>P. Sahle, Text-Rad: TextW</item>
+                            <item>F1 Work / F2 Expression</item>
+                        </list>
+                    </note>
+                    <note type="mapping" xml:lang="en">
+                        <list>
+                            <item>P. Sahle, text wheel (Text-Rad): TextW</item>
+                            <item>F1 Work / F2 Expression</item>
+                        </list>
+                    </note>
+                    <note type="mapping" subtype="concepts">
+                        <list>
+                            <item cert="high" ana="#skos-closeMatch">
+                                <ref target="https://lexiconse.uantwerpen.be/lexicon/textWork.html">
+                                    <term>text (work)</term>
+                                </ref> (<ref target="#src-lexiconse">LexiconSE</ref>)
+                            </item>
+                            <item cert="medium" ana="#skos-broadMatch">
+                                <ref target="https://cidoc-crm.org/sites/default/files/LRMoo_V1.1.1.pdf#page=30">
+                                    <term>F1 Work</term>
+                                </ref> (<ref target="#src-lrmoo">LRMoo</ref>)
+                            </item>
+                            <item cert="medium" ana="#skos-broadMatch">
+                                <ref target="http://purl.org/critical-edition-ontology#F1_Work">
+                                    <term>F1 Work</term>
+                                </ref> (<ref target="#src-ceo">CEO</ref>)
+                            </item>
+                        </list>
+                    </note>
+                    <note type="baserow">
+                        <idno type="baserowTable">works</idno> – <ref target="https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5794/16550">https://baserow.acdh-dev.oeaw.ac.at/database/1448/table/5794/16550</ref>
+                    </note>
+                </entry>
+            </div>
+            <div type="sources">
+                <listBibl xml:id="mappingSources">
+                    <head xml:lang="de">Für das Mapping genutzte Ressourcen</head>
+                    <head xml:lang="en">Resources searched for the mapping</head>
+                    <bibl xml:id="src-eed" xml:lang="en">
+                        <author>Hans Cools</author>; <author>Hugues Marchal</author>; <author>Roberta Padlina</author> (<orgName>Universities of Basel, Bern and Zürich</orgName>): <title>Scholarly Editing: An ontology about scientific editing</title>. <ref target="http://e-editiones.ch/ontology/scholarly-editing">http://e-editiones.ch/ontology/scholarly-editing</ref> (imported modules: <ref target="http://e-editiones.ch/ontology/information-carrier">information-carrier</ref>, <ref target="http://e-editiones.ch/ontology/text">text</ref>, <ref target="http://e-editiones.ch/ontology/document">document</ref>) [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-lrmoo" xml:lang="en">
+                        <author>Chryssoula Bekiari</author>; <author>Martin Doerr</author>; <author>Patrick Le Bœuf</author>; <author>Pat Riva</author> (eds.) (<orgName>IFLA LRMoo Working Group / CIDOC CRM Special Interest Group</orgName>): <title>LRMoo: Object-oriented definition and mapping from the IFLA Library Reference Model</title>, version 1.1.1. <ref target="https://cidoc-crm.org/sites/default/files/LRMoo_V1.1.1.pdf">https://cidoc-crm.org/sites/default/files/LRMoo_V1.1.1.pdf</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-ceo" xml:lang="en">
+                        <author>Chiara Martignano</author>: <title>Critical Edition Ontology (CEO)</title>. <ref target="https://chiaramartignano.github.io/critical-edition-ontology">https://chiaramartignano.github.io/critical-edition-ontology</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-edlex" xml:lang="de">
+                        <author>Roland S. Kamzelak</author> (Begründer): <title>Editionslexikon Edlex</title>. <ref target="https://edlex.de">https://edlex.de</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-cao" xml:lang="en">
+                        <author>Francesca Giovannetti</author>: <title>The Critical Apparatus Ontology (CAO)</title>, release 2019-07-08. <ref target="https://fgiovannetti.github.io/cao/">https://fgiovannetti.github.io/cao/</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-geno" xml:lang="en">
+                        <author>Elena Spadini</author>; <author>Alessio Christen</author>: <title>GENO, the Genetic Networks Ontology</title>. <ref target="https://gen-o.github.io">https://gen-o.github.io</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-hmml" xml:lang="en">
+                        <orgName>Hill Museum &amp; Manuscript Library (HMML)</orgName>: <title>Lexicon Terms and Search: Terms used in manuscript studies</title>. <ref target="https://hmmlschool.org/lexicon">https://hmmlschool.org/lexicon</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-interpares" xml:lang="en">
+                        <author>Luciana Duranti</author>; <author>Victoria Lemieux</author>; <author>Richard Pearce-Moses</author> (eds.) (<orgName>InterPARES Trust</orgName>): <title>InterPARES Trust – Terminology Database</title>. <ref target="https://interparestrust.org/terminology">https://interparestrust.org/terminology</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-lexiconse" xml:lang="en">
+                        <author>Wout Dillen</author> (<orgName>Centre for Manuscript Genetics, Universiteit Antwerpen; European Society for Textual Scholarship</orgName>): <title>LexiconSE: A Lexicon for Scholarly Editing</title>. <ref target="https://lexiconse.uantwerpen.be/lexicon">https://lexiconse.uantwerpen.be/lexicon</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-tei" xml:lang="en">
+                        <orgName>TEI Consortium</orgName>: <title>TEI Guidelines, Appendix C: Elements</title>, P5 version 4.12.0. <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html">https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-pls" xml:lang="en">
+                        <author>Caroline Macé</author>; <author>Philipp Roelli</author> (eds.); <author>Odd Einar Haugen</author> (<orgName>Studia Stemmatologica</orgName>): <title>Parvum lexicon stemmatologicum: A brief lexicon of stemmatology</title>. <ref target="https://wiki.helsinki.fi/xwiki/bin/view/stemmatology">https://wiki.helsinki.fi/xwiki/bin/view/stemmatology</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-prov" xml:lang="en">
+                        <author>Timothy Lebo</author>; <author>Satya Sahoo</author>; <author>Deborah McGuinness</author> (eds.) (<orgName>W3C Provenance Working Group</orgName>): <title>PROV-O: The PROV Ontology</title>. W3C Recommendation 30 April 2013. <ref target="https://www.w3.org/TR/2013/REC-prov-o-20130430/">https://www.w3.org/TR/2013/REC-prov-o-20130430/</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                    <bibl xml:id="src-konde" xml:lang="de">
+                        <orgName>Weißbuch „Digitale Edition“ (KONDE – Kompetenznetzwerk Digitale Edition)</orgName>: <title>Begriffe</title>. <ref target="https://www.digitale-edition.at/archive/objects/context:konde/methods/sdef:Context/get?mode=terms">https://www.digitale-edition.at/archive/objects/context:konde/methods/sdef:Context/get?mode=terms</ref> [<date type="accessed" when="2026-10-12">2026-10-12</date>]
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
 </TEI>
