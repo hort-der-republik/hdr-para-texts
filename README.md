@@ -12,6 +12,10 @@ Para texts for the soon to come HDR-Webapp are written and encoded as TEI/XML do
 
 All files in `data/*/*.xml` are licensed under XXX
 
+### Logos
+
+For licenses, copyrights of images/logos located in [`data/img/`](data/img/) see [`img-credits.csv`](https://github.com/hort-der-republik/hdr-para-texts/blob/main/data/img/img-credits.csv)
+
 ### Third-party software
 
 #### Saxon
