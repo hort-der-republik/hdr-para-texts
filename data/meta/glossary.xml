@@ -308,19 +308,21 @@
                         <def xml:lang="en">Virtual compilation of several <ref target="#traeger-a">carriers (a.)</ref>, determined by the genesis and the order of the text (i.e. diachronically and synchronically). Arranged along a temporal axis, several sub-dossiers can represent the sequence of text genesis on a material level. Individual sub-dossiers carry text excerpts in the form of 1..n text stages (base layer, coherent correction layers).</def>
                     </sense>
                     <sense n="b" xml:id="teildossier-b">
-                        <def xml:lang="de">(Projektintern, vom Datenmodell induziert) Virtuelle Zusammenstellung mehrerer <ref target="#traeger-b">Träger (b.)</ref>, in diesem Fall zumeist: der publizierten <ref target="#textStufe">Stufe</ref> von Texten, die in einem genetischen / intertextuellen Verhältnis zum <ref target="#werk">Werk</ref> „<title xml:lang="de">Der Hort der Republik</title>“ stehen.</def>
-                        <def xml:lang="en">(Project-internal, induced by the data model) Virtual compilation of several <ref target="#traeger-b">carriers (b.)</ref>, in this case mostly: of the published <ref target="#textStufe">stage</ref> of texts that stand in a genetic / intertextual relation to the <ref target="#werk">work</ref> “<title xml:lang="de">Der Hort der Republik</title>”.</def>
+                        <def xml:lang="de">(Projektintern, vom Datenmodell induziert) Virtuelle Zusammenstellung mehrerer <ref target="#traeger-b">Träger (b.)</ref>, in diesem Fall zumeist: die die publizierte <ref target="#textStufe">Stufe</ref> derjenigen Texte tragen, die in einem genetischen / intertextuellen Verhältnis zum <ref target="#werk">Werk</ref> „<title xml:lang="de">Der Hort der Republik</title>“ stehen.</def>
+                        <def xml:lang="en">(Project-internal, induced by the data model) Virtual compilation of several <ref target="#traeger-b">carriers (b.)</ref>, in this case mostly carrying the published <ref target="#textStufe">stages</ref> of texts that stand in a genetic / intertextual relation to the <ref target="#werk">work</ref> “<title xml:lang="de">Der Hort der Republik</title>”.</def>
                     </sense>
                     <note type="categories" xml:lang="de">
                         <list>
                             <item>avant-texte vs. Text vs. rekonstruierter avant-texte vs. erweiterter avant-texte</item>
                             <item>Zugehörigkeit zur Textmontage vs. zum kontinuierlichen Text (vs. zum Paratext)</item>
+                            <item>Vor / nach dem Umbruch (im Fall von Druckfahnen)</item>
                         </list>
                     </note>
                     <note type="categories" xml:lang="en">
                         <list>
                             <item>avant-texte vs. text vs. reconstructed avant-texte vs. extended avant-texte</item>
                             <item>Belonging to the text montage vs. to the continuous text (vs. to the paratext)</item>
+                            <item>Before / after layout (for proofs)</item>
                         </list>
                     </note>
                     <note type="cardinality" xml:lang="de">
